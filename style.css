@@ -1,0 +1,153 @@
+:root {
+
+    /* Colors */
+
+    /* Primary */
+
+    --cyan: hsl(179, 62%, 43%);
+    --cyan-2: hsl(179, 62%, 70%);
+    --bright-yellow: hsl(71, 73%, 54%);
+
+    /* Neutral */
+
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--light-gray);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 63rem;
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, .2), -1rem 2rem 4rem rgba(0, 0, 0, .2);
+    margin: 3rem 2rem;
+}
+
+.padding-2rem {
+    padding: 4.5rem;
+}
+
+.top {
+    background-color: white;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.top__header {
+    color: var(--cyan);
+    margin-bottom: 2rem;
+}
+
+.top__header2 {
+    color: var(--bright-yellow);
+    margin-bottom: 2rem;
+}
+
+.top__paragraph {
+    color: var(--grayish-blue);
+}
+
+.bottom {
+    color: white;
+    font-weight: 400;
+
+    display: flex;  
+}
+
+.bottom__heading {
+    margin-bottom: 1rem;
+}
+
+.left {
+    width: 50%;
+    background-color: var(--cyan);
+    border-radius: 0 0 0 1rem;
+}
+
+.left__heading2 {
+    color: var(--light-gray);
+    font-weight: 400;
+    margin-bottom: 1rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.left__heading2 span {
+    font-size: 3rem;
+    color: white;
+    margin-right: .5rem;
+}
+
+.left__heading3 {
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+
+.right {
+    width: 50%;
+    background-color: var(--cyan-2);
+    border-radius: 0 0 1rem 0;
+}
+
+.right__paragraph {
+    color: var(--light-gray);
+    font-weight: 400;
+}
+
+.btn {
+    width: 100%;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--bright-yellow);
+    color: white;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 650px) {
+    .container {
+        width: 33.5rem;
+    }
+
+    .bottom {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+        border-radius: 0 0 0 0;
+    }
+
+    .right {
+        width: 100%;
+        border-radius: 0 0 1rem 1rem;
+    }
+}
